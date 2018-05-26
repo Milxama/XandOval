@@ -131,7 +131,7 @@ public class XandOval extends JFrame{
 			}
 
 		
-			if((buttons[0].getText()!=""&&((buttons[0].getText()==buttons[1].getText()&& buttons[1].getText()==buttons[2].getText()))) || ((buttons[0].getText()!="")&&((buttons[0].getText()==buttons[3].getText()&& buttons[3].getText()==buttons[6].getText()))) || (buttons[6].getText()!="")&&((buttons[6].getText()==buttons[7].getText()&& buttons[7].getText()==buttons[8].getText())) || (buttons[8].getText()!="")&&((buttons[8].getText()==buttons[5].getText()&& buttons[5].getText()==buttons[2].getText())) || (buttons[0].getText()!="")&&((buttons[0].getText()==buttons[4].getText()&& buttons[4].getText()==buttons[8].getText())) || (buttons[2].getText()!="")&&((buttons[2].getText()==buttons[4].getText()&& buttons[4].getText()==buttons[6].getText())))
+			if(((((buttons[3].getText()!="")&&((buttons[3].getText()==buttons[4].getText()&& buttons[4].getText()==buttons[5].getText()))) || (buttons[1].getText()!="")&&((buttons[1].getText()==buttons[4].getText()&& buttons[4].getText()==buttons[7].getText()))) || (buttons[0].getText()!="")&&((buttons[0].getText()==buttons[1].getText()&& buttons[1].getText()==buttons[2].getText()))) || ((buttons[0].getText()!="")&&((buttons[0].getText()==buttons[3].getText()&& buttons[3].getText()==buttons[6].getText()))) || (buttons[6].getText()!="")&&((buttons[6].getText()==buttons[7].getText()&& buttons[7].getText()==buttons[8].getText())) || (buttons[8].getText()!="")&&((buttons[8].getText()==buttons[5].getText()&& buttons[5].getText()==buttons[2].getText())) || (buttons[0].getText()!="")&&((buttons[0].getText()==buttons[4].getText()&& buttons[4].getText()==buttons[8].getText())) || (buttons[2].getText()!="")&&((buttons[2].getText()==buttons[4].getText()&& buttons[4].getText()==buttons[6].getText())))
 		    {
 	           message.showMessageDialog(null,"Congratilations!!!","You are won",JOptionPane.INFORMATION_MESSAGE);
 	           for(int i=0;i<buttons.length;i++)
@@ -159,11 +159,12 @@ public class XandOval extends JFrame{
 			}
 			if(counter==0)
 			{
+		      message.showMessageDialog(null,"New game Started","Anyone is not wone",JOptionPane.INFORMATION_MESSAGE);
 				for(int i=0;i<buttons.length;i++)
 			{
-				 buttons[i].setIcon(icon3);
-			       buttons[i].setText("");		
-			       buttons[i].setEnabled(true);
+			    buttons[i].setIcon(icon3);
+			    buttons[i].setText("");		
+			    buttons[i].setEnabled(true);
 				
 			}
 			}

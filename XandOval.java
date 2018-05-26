@@ -27,7 +27,7 @@ public class XandOval extends JFrame{
 	private Icon[] icons;
 	private static int counter=9;
 	public XandOval(){
-		super("Xand Oval game application");
+		super("X and Oval game application");
 		JMenu filemenu=new JMenu("File");
 		filemenu.setMnemonic('F');
 		
@@ -38,6 +38,8 @@ public class XandOval extends JFrame{
 		JMenuItem close=new JMenuItem("Close");
 		close.setMnemonic('C');
 		filemenu.add(close);
+		
+
 		
 		about.addActionListener(
 			new ActionListener(){
@@ -83,7 +85,7 @@ public class XandOval extends JFrame{
 		icons[0]=new ImageIcon(getClass().getResource(choices[0]+".png"));
 		icons[1]=new ImageIcon(getClass().getResource(choices[1]+".png"));
 		JOptionPane message=new JOptionPane();
-	    message.showMessageDialog(null,"First player default choice is X","The second player default coice is O",JOptionPane.INFORMATION_MESSAGE,icons[0]);
+	    message.showMessageDialog(null,"First player default choice is X","The second player default choice is O",JOptionPane.INFORMATION_MESSAGE,icons[0]);
 
 
 				
@@ -133,14 +135,12 @@ public class XandOval extends JFrame{
 		
 			if(((((buttons[3].getText()!="")&&((buttons[3].getText()==buttons[4].getText()&& buttons[4].getText()==buttons[5].getText()))) || (buttons[1].getText()!="")&&((buttons[1].getText()==buttons[4].getText()&& buttons[4].getText()==buttons[7].getText()))) || (buttons[0].getText()!="")&&((buttons[0].getText()==buttons[1].getText()&& buttons[1].getText()==buttons[2].getText()))) || ((buttons[0].getText()!="")&&((buttons[0].getText()==buttons[3].getText()&& buttons[3].getText()==buttons[6].getText()))) || (buttons[6].getText()!="")&&((buttons[6].getText()==buttons[7].getText()&& buttons[7].getText()==buttons[8].getText())) || (buttons[8].getText()!="")&&((buttons[8].getText()==buttons[5].getText()&& buttons[5].getText()==buttons[2].getText())) || (buttons[0].getText()!="")&&((buttons[0].getText()==buttons[4].getText()&& buttons[4].getText()==buttons[8].getText())) || (buttons[2].getText()!="")&&((buttons[2].getText()==buttons[4].getText()&& buttons[4].getText()==buttons[6].getText())))
 		    {
-	           message.showMessageDialog(null,"Congratilations!!!","You are won",JOptionPane.INFORMATION_MESSAGE);
+	           message.showMessageDialog(null,"Congratulations!!!","You are the winner",JOptionPane.INFORMATION_MESSAGE);
 	           for(int i=0;i<buttons.length;i++)
 	           {
 	           	   buttons[i].setIcon(icon3);
 			       buttons[i].setText("");		
 			       buttons[i].setEnabled(true);
-
-	           	   
 	           }
 			}
 			else
@@ -159,7 +159,7 @@ public class XandOval extends JFrame{
 			}
 			if(counter==0)
 			{
-		      message.showMessageDialog(null,"New game Started","Anyone is not wone",JOptionPane.INFORMATION_MESSAGE);
+		      message.showMessageDialog(null,"New game will be started","NO WINNER!",JOptionPane.INFORMATION_MESSAGE);
 				for(int i=0;i<buttons.length;i++)
 			{
 			    buttons[i].setIcon(icon3);
@@ -171,12 +171,6 @@ public class XandOval extends JFrame{
 
 				counter=9;
 	    }
-			    
-				
-
-   
-		
-		
 	
 	}
 }
